@@ -24,50 +24,29 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * ErrorDetail
+ * CandidatePortalLinkResponse
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-03T12:54:52.852-08:00")
-public class ErrorDetail {
-  @SerializedName("code")
-  private String code = null;
+public class CandidatePortalLinkResponse {
+  @SerializedName("candidatePortal")
+  private String candidatePortal = null;
 
-  @SerializedName("message")
-  private String message = null;
-
-  public ErrorDetail code(String code) {
-    this.code = code;
+  public CandidatePortalLinkResponse candidatePortal(String candidatePortal) {
+    this.candidatePortal = candidatePortal;
     return this;
   }
 
    /**
-   * Get code
-   * @return code
+   * Get candidatePortal
+   * @return candidatePortal
   **/
   @ApiModelProperty(value = "")
-  public String getCode() {
-    return code;
+  public String getCandidatePortal() {
+    return candidatePortal;
   }
 
-  public void setCode(String code) {
-    this.code = code;
-  }
-
-  public ErrorDetail message(String message) {
-    this.message = message;
-    return this;
-  }
-
-   /**
-   * Get message
-   * @return message
-  **/
-  @ApiModelProperty(value = "")
-  public String getMessage() {
-    return message;
-  }
-
-  public void setMessage(String message) {
-    this.message = message;
+  public void setCandidatePortal(String candidatePortal) {
+    this.candidatePortal = candidatePortal;
   }
 
 
@@ -79,24 +58,22 @@ public class ErrorDetail {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ErrorDetail errorDetail = (ErrorDetail) o;
-    return Objects.equals(this.code, errorDetail.code) &&
-        Objects.equals(this.message, errorDetail.message);
+    CandidatePortalLinkResponse candidatePortalLinkResponse = (CandidatePortalLinkResponse) o;
+    return Objects.equals(this.candidatePortal, candidatePortalLinkResponse.candidatePortal);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(code, message);
+    return Objects.hash(candidatePortal);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ErrorDetail {\n");
+    sb.append("class CandidatePortalLinkResponse {\n");
     
-    sb.append("    code: ").append(toIndentedString(code)).append("\n");
-    sb.append("    message: ").append(toIndentedString(message)).append("\n");
+    sb.append("    candidatePortal: ").append(toIndentedString(candidatePortal)).append("\n");
     sb.append("}");
     return sb.toString();
   }

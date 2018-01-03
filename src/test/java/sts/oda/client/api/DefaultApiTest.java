@@ -30,7 +30,6 @@ import sts.oda.client.model.PackageResponse;
 import sts.oda.client.model.ReferenceCodesResponse;
 import sts.oda.client.model.ScreeningRequest;
 import sts.oda.client.model.ScreeningResponse;
-import sts.oda.client.model.ScreeningSummaryResponse;
 import sts.oda.client.model.SubscriptionEventsResponse;
 import sts.oda.client.model.SubscriptionRequest;
 import sts.oda.client.model.SubscriptionResponse;
@@ -318,22 +317,7 @@ public class DefaultApiTest {
 
         // TODO: test validations
     }
-    
-    /**
-     * 
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void screeningsGetTest() throws ApiException {
-        List<ScreeningSummaryResponse> response = api.screeningsGet();
 
-        // TODO: test validations
-    }
-    
     /**
      * 
      *

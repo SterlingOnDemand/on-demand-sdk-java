@@ -210,7 +210,6 @@ Class | Method | HTTP request | Description
  - [ScreeningResponse](docs/ScreeningResponse.md)
  - [ScreeningResponseLink](docs/ScreeningResponseLink.md)
  - [ScreeningResponseReportItem](docs/ScreeningResponseReportItem.md)
- - [ScreeningSummaryResponse](docs/ScreeningSummaryResponse.md)
  - [SubscriptionEventsResponse](docs/SubscriptionEventsResponse.md)
  - [SubscriptionRequest](docs/SubscriptionRequest.md)
  - [SubscriptionResponse](docs/SubscriptionResponse.md)

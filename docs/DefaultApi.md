@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**candidatesIdDocumentsGet**](DefaultApi.md#candidatesIdDocumentsGet) | **GET** /candidates/{id}/documents | 
 [**candidatesIdDocumentsPost**](DefaultApi.md#candidatesIdDocumentsPost) | **POST** /candidates/{id}/documents | 
 [**candidatesIdGet**](DefaultApi.md#candidatesIdGet) | **GET** /candidates/{id} | 
+[**candidatesIdLinksPost**](DefaultApi.md#candidatesIdLinksPost) | **POST** /candidates/{id}/links | 
 [**candidatesIdPut**](DefaultApi.md#candidatesIdPut) | **PUT** /candidates/{id} | 
 [**candidatesIdTrustPost**](DefaultApi.md#candidatesIdTrustPost) | **POST** /candidates/{id}/trust | 
 [**candidatesPost**](DefaultApi.md#candidatesPost) | **POST** /candidates | 
@@ -20,7 +21,6 @@ Method | HTTP request | Description
 [**packagesGet**](DefaultApi.md#packagesGet) | **GET** /packages | 
 [**packagesIdPriceGet**](DefaultApi.md#packagesIdPriceGet) | **GET** /packages/{id}/price | 
 [**referenceCodesGet**](DefaultApi.md#referenceCodesGet) | **GET** /reference-codes | 
-[**screeningsGet**](DefaultApi.md#screeningsGet) | **GET** /screenings | 
 [**screeningsIdAdverseActionsPost**](DefaultApi.md#screeningsIdAdverseActionsPost) | **POST** /screenings/{id}/adverse-actions | 
 [**screeningsIdDocumentsPost**](DefaultApi.md#screeningsIdDocumentsPost) | **POST** /screenings/{id}/documents | 
 [**screeningsIdGet**](DefaultApi.md#screeningsIdGet) | **GET** /screenings/{id} | 
@@ -252,6 +252,49 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CandidateResponse**](CandidateResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="candidatesIdLinksPost"></a>
+# **candidatesIdLinksPost**
+> CandidatePortalLinkResponse candidatesIdLinksPost(id)
+
+
+
+### Example
+```java
+// Import classes:
+//import sts.oda.client.ApiException;
+//import sts.oda.client.api.DefaultApi;
+
+
+DefaultApi apiInstance = new DefaultApi();
+String id = "id_example"; // String | 
+try {
+    CandidatePortalLinkResponse result = apiInstance.candidatesIdLinksPost(id);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DefaultApi#candidatesIdLinksPost");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
+
+### Return type
+
+[**CandidatePortalLinkResponse**](CandidatePortalLinkResponse.md)
 
 ### Authorization
 
@@ -729,45 +772,6 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**ReferenceCodesResponse**](ReferenceCodesResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="screeningsGet"></a>
-# **screeningsGet**
-> List&lt;ScreeningSummaryResponse&gt; screeningsGet()
-
-
-
-### Example
-```java
-// Import classes:
-//import sts.oda.client.ApiException;
-//import sts.oda.client.api.DefaultApi;
-
-
-DefaultApi apiInstance = new DefaultApi();
-try {
-    List<ScreeningSummaryResponse> result = apiInstance.screeningsGet();
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#screeningsGet");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**List&lt;ScreeningSummaryResponse&gt;**](ScreeningSummaryResponse.md)
 
 ### Authorization
 
