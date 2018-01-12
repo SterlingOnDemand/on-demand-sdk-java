@@ -28,7 +28,7 @@ import java.util.List;
 /**
  * PackageResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-03T12:54:52.852-08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-12T12:11:57.321-08:00")
 public class PackageResponse {
   @SerializedName("active")
   private Boolean active = null;
