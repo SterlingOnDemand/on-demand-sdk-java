@@ -5,30 +5,30 @@ All URIs are relative to *https://api-int.kennect.com/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**billingCodesGet**](DefaultApi.md#billingCodesGet) | **GET** /billing-codes | 
-[**candidatesGet**](DefaultApi.md#candidatesGet) | **GET** /candidates | 
-[**candidatesIdDocumentsGet**](DefaultApi.md#candidatesIdDocumentsGet) | **GET** /candidates/{id}/documents | 
-[**candidatesIdDocumentsPost**](DefaultApi.md#candidatesIdDocumentsPost) | **POST** /candidates/{id}/documents | 
-[**candidatesIdGet**](DefaultApi.md#candidatesIdGet) | **GET** /candidates/{id} | 
-[**candidatesIdLinksPost**](DefaultApi.md#candidatesIdLinksPost) | **POST** /candidates/{id}/links | 
-[**candidatesIdPut**](DefaultApi.md#candidatesIdPut) | **PUT** /candidates/{id} | 
-[**candidatesIdTrustPost**](DefaultApi.md#candidatesIdTrustPost) | **POST** /candidates/{id}/trust | 
-[**candidatesPost**](DefaultApi.md#candidatesPost) | **POST** /candidates | 
+[**candidatesGet**](DefaultApi.md#candidatesGet) | **GET** /candidates | Get a list of Candidates
+[**candidatesIdDocumentsGet**](DefaultApi.md#candidatesIdDocumentsGet) | **GET** /candidates/{id}/documents | List documents attached to a candidate
+[**candidatesIdDocumentsPost**](DefaultApi.md#candidatesIdDocumentsPost) | **POST** /candidates/{id}/documents | Attach a document to a candidate
+[**candidatesIdGet**](DefaultApi.md#candidatesIdGet) | **GET** /candidates/{id} | Get a specific Candidate
+[**candidatesIdLinksPost**](DefaultApi.md#candidatesIdLinksPost) | **POST** /candidates/{id}/links | Get links to the Candidate portal for use by the Candidate
+[**candidatesIdPut**](DefaultApi.md#candidatesIdPut) | **PUT** /candidates/{id} | Update a candidate
+[**candidatesIdTrustPost**](DefaultApi.md#candidatesIdTrustPost) | **POST** /candidates/{id}/trust | Trust a candidate
+[**candidatesPost**](DefaultApi.md#candidatesPost) | **POST** /candidates | Create a candidate
 [**healthGet**](DefaultApi.md#healthGet) | **GET** /health | 
 [**identitiesIdGet**](DefaultApi.md#identitiesIdGet) | **GET** /identities/{id} | 
 [**identitiesIdRetryPost**](DefaultApi.md#identitiesIdRetryPost) | **POST** /identities/{id}/retry | 
 [**identitiesIdVerificationPut**](DefaultApi.md#identitiesIdVerificationPut) | **PUT** /identities/{id}/verification | 
 [**identitiesPost**](DefaultApi.md#identitiesPost) | **POST** /identities | 
-[**packagesGet**](DefaultApi.md#packagesGet) | **GET** /packages | 
-[**packagesIdPriceGet**](DefaultApi.md#packagesIdPriceGet) | **GET** /packages/{id}/price | 
+[**packagesGet**](DefaultApi.md#packagesGet) | **GET** /packages | Get a list of Packages
+[**packagesIdPriceGet**](DefaultApi.md#packagesIdPriceGet) | **GET** /packages/{id}/price | Get the estimated price of a Package
 [**referenceCodesGet**](DefaultApi.md#referenceCodesGet) | **GET** /reference-codes | 
-[**screeningsIdAdverseActionsPost**](DefaultApi.md#screeningsIdAdverseActionsPost) | **POST** /screenings/{id}/adverse-actions | 
-[**screeningsIdDocumentsPost**](DefaultApi.md#screeningsIdDocumentsPost) | **POST** /screenings/{id}/documents | 
-[**screeningsIdGet**](DefaultApi.md#screeningsIdGet) | **GET** /screenings/{id} | 
-[**screeningsIdInvitePost**](DefaultApi.md#screeningsIdInvitePost) | **POST** /screenings/{id}/invite | 
-[**screeningsIdReportGet**](DefaultApi.md#screeningsIdReportGet) | **GET** /screenings/{id}/report | 
-[**screeningsIdReportLinksPost**](DefaultApi.md#screeningsIdReportLinksPost) | **POST** /screenings/{id}/report-links | 
-[**screeningsIdReportPdfGet**](DefaultApi.md#screeningsIdReportPdfGet) | **GET** /screenings/{id}/report.pdf | 
-[**screeningsPost**](DefaultApi.md#screeningsPost) | **POST** /screenings | 
+[**screeningsIdAdverseActionsPost**](DefaultApi.md#screeningsIdAdverseActionsPost) | **POST** /screenings/{id}/adverse-actions | Create an adverse action on a Screening
+[**screeningsIdDocumentsPost**](DefaultApi.md#screeningsIdDocumentsPost) | **POST** /screenings/{id}/documents | Attach a document to a Screening
+[**screeningsIdGet**](DefaultApi.md#screeningsIdGet) | **GET** /screenings/{id} | Get a specific screening
+[**screeningsIdInvitePost**](DefaultApi.md#screeningsIdInvitePost) | **POST** /screenings/{id}/invite | Create an invite
+[**screeningsIdReportGet**](DefaultApi.md#screeningsIdReportGet) | **GET** /screenings/{id}/report | Get a Screening report in PDF form
+[**screeningsIdReportLinksPost**](DefaultApi.md#screeningsIdReportLinksPost) | **POST** /screenings/{id}/report-links | Create  a one-time use report link
+[**screeningsIdReportPdfGet**](DefaultApi.md#screeningsIdReportPdfGet) | **GET** /screenings/{id}/report.pdf | Get a Screening report in PDF form
+[**screeningsPost**](DefaultApi.md#screeningsPost) | **POST** /screenings | Create a Screening
 [**subscriptionsIdDelete**](DefaultApi.md#subscriptionsIdDelete) | **DELETE** /subscriptions/{id} | 
 [**subscriptionsIdEventsGet**](DefaultApi.md#subscriptionsIdEventsGet) | **GET** /subscriptions/{id}/events | 
 [**subscriptionsIdGet**](DefaultApi.md#subscriptionsIdGet) | **GET** /subscriptions/{id} | 
@@ -41,6 +41,8 @@ Method | HTTP request | Description
 <a name="billingCodesGet"></a>
 # **billingCodesGet**
 > BillingCodesResponse billingCodesGet()
+
+
 
 
 
@@ -81,7 +83,9 @@ No authorization required
 # **candidatesGet**
 > CandidateResponse candidatesGet(limit, offset, givenName, familyName, clientReferenceId, email)
 
+Get a list of Candidates
 
+Get a list of Candidates
 
 ### Example
 ```java
@@ -134,7 +138,9 @@ No authorization required
 # **candidatesIdDocumentsGet**
 > List&lt;CandidateDocumentResponse&gt; candidatesIdDocumentsGet(id)
 
+List documents attached to a candidate
 
+List documents attached to a candidate
 
 ### Example
 ```java
@@ -177,7 +183,9 @@ No authorization required
 # **candidatesIdDocumentsPost**
 > candidatesIdDocumentsPost(id, accept, fileName)
 
+Attach a document to a candidate
 
+Attach a document to a candidate
 
 ### Example
 ```java
@@ -223,7 +231,9 @@ No authorization required
 # **candidatesIdGet**
 > CandidateResponse candidatesIdGet(id)
 
+Get a specific Candidate
 
+Get a specific Candidate
 
 ### Example
 ```java
@@ -266,7 +276,9 @@ No authorization required
 # **candidatesIdLinksPost**
 > CandidatePortalLinkResponse candidatesIdLinksPost(id)
 
+Get links to the Candidate portal for use by the Candidate
 
+Get links to the Candidate portal for use by the Candidate
 
 ### Example
 ```java
@@ -309,7 +321,9 @@ No authorization required
 # **candidatesIdPut**
 > CandidateResponse candidatesIdPut(id, candidateRequest)
 
+Update a candidate
 
+Update a candidate
 
 ### Example
 ```java
@@ -354,7 +368,9 @@ No authorization required
 # **candidatesIdTrustPost**
 > TrustedUserResponse candidatesIdTrustPost(id, trustedUserRequest)
 
+Trust a candidate
 
+Trust a candidate
 
 ### Example
 ```java
@@ -399,7 +415,9 @@ No authorization required
 # **candidatesPost**
 > CandidateResponse candidatesPost(candidateRequest)
 
+Create a candidate
 
+Create a candidate
 
 ### Example
 ```java
@@ -441,6 +459,8 @@ No authorization required
 <a name="healthGet"></a>
 # **healthGet**
 > HealthResponse healthGet(deep)
+
+
 
 
 
@@ -487,6 +507,8 @@ No authorization required
 
 
 
+
+
 ### Example
 ```java
 // Import classes:
@@ -530,6 +552,8 @@ No authorization required
 
 
 
+
+
 ### Example
 ```java
 // Import classes:
@@ -570,6 +594,8 @@ No authorization required
 <a name="identitiesIdVerificationPut"></a>
 # **identitiesIdVerificationPut**
 > IdentityResponse identitiesIdVerificationPut(id, verificationRequest)
+
+
 
 
 
@@ -618,6 +644,8 @@ No authorization required
 
 
 
+
+
 ### Example
 ```java
 // Import classes:
@@ -659,7 +687,9 @@ No authorization required
 # **packagesGet**
 > List&lt;PackageResponse&gt; packagesGet(all)
 
+Get a list of Packages
 
+Get a list of Packages
 
 ### Example
 ```java
@@ -702,7 +732,9 @@ No authorization required
 # **packagesIdPriceGet**
 > PackagePriceResponse packagesIdPriceGet(id, candidateId)
 
+Get the estimated price of a Package
 
+Get the estimated price of a Package
 
 ### Example
 ```java
@@ -749,6 +781,8 @@ No authorization required
 
 
 
+
+
 ### Example
 ```java
 // Import classes:
@@ -786,7 +820,9 @@ No authorization required
 # **screeningsIdAdverseActionsPost**
 > screeningsIdAdverseActionsPost(id, adverseActionRequest)
 
+Create an adverse action on a Screening
 
+Create an adverse action on a Screening
 
 ### Example
 ```java
@@ -830,7 +866,9 @@ No authorization required
 # **screeningsIdDocumentsPost**
 > screeningsIdDocumentsPost(id, accept, documentType, party)
 
+Attach a document to a Screening
 
+Attach a document to a Screening
 
 ### Example
 ```java
@@ -878,7 +916,9 @@ No authorization required
 # **screeningsIdGet**
 > ScreeningResponse screeningsIdGet(id)
 
+Get a specific screening
 
+Get a specific screening
 
 ### Example
 ```java
@@ -921,7 +961,9 @@ No authorization required
 # **screeningsIdInvitePost**
 > InviteResponse screeningsIdInvitePost(id)
 
+Create an invite
 
+Create an invite
 
 ### Example
 ```java
@@ -964,7 +1006,9 @@ No authorization required
 # **screeningsIdReportGet**
 > Map&lt;String, String&gt; screeningsIdReportGet(id, accept)
 
+Get a Screening report in PDF form
 
+Get a Screening report in PDF form
 
 ### Example
 ```java
@@ -1009,7 +1053,9 @@ No authorization required
 # **screeningsIdReportLinksPost**
 > OneTimeReportLinkResponse screeningsIdReportLinksPost(id)
 
+Create  a one-time use report link
 
+Create  a one-time use report link
 
 ### Example
 ```java
@@ -1052,7 +1098,9 @@ No authorization required
 # **screeningsIdReportPdfGet**
 > Map&lt;String, String&gt; screeningsIdReportPdfGet(id, token)
 
+Get a Screening report in PDF form
 
+Get a Screening report in PDF form
 
 ### Example
 ```java
@@ -1097,7 +1145,9 @@ No authorization required
 # **screeningsPost**
 > ScreeningResponse screeningsPost(screeningRequest, idempotencyKey)
 
+Create a Screening
 
+Create a Screening
 
 ### Example
 ```java
@@ -1144,6 +1194,8 @@ No authorization required
 
 
 
+
+
 ### Example
 ```java
 // Import classes:
@@ -1184,6 +1236,8 @@ No authorization required
 <a name="subscriptionsIdEventsGet"></a>
 # **subscriptionsIdEventsGet**
 > SubscriptionEventsResponse subscriptionsIdEventsGet(id)
+
+
 
 
 
@@ -1230,6 +1284,8 @@ No authorization required
 
 
 
+
+
 ### Example
 ```java
 // Import classes:
@@ -1270,6 +1326,8 @@ No authorization required
 <a name="subscriptionsPost"></a>
 # **subscriptionsPost**
 > SubscriptionResponse subscriptionsPost(subscriptionRequest)
+
+
 
 
 
@@ -1316,6 +1374,8 @@ No authorization required
 
 
 
+
+
 ### Example
 ```java
 // Import classes:
@@ -1359,6 +1419,8 @@ No authorization required
 
 
 
+
+
 ### Example
 ```java
 // Import classes:
@@ -1399,6 +1461,8 @@ No authorization required
 <a name="trustsIdDelete"></a>
 # **trustsIdDelete**
 > trustsIdDelete(id)
+
+
 
 
 

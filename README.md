@@ -1,6 +1,6 @@
-# SwaggerClient-java
+# Sterling On Demand API SDK for Java
 
-This SDK allows you to call the Sterling Talent Solutions On-Demand API.
+This SDK allows you to call the Sterling Talent Solutions On Demand API.
 
 ## Requirements
 
@@ -9,7 +9,7 @@ Maven 2.3.2 or later
 Java 8 JDK
 
 ## Export credentials
-The example script as well as the Integration tests require valid credentials. For these scripts, the 'credentials'
+The example script as well as the Integration tests, require valid credentials. For these scripts, the 'credentials'
 environmental variable needs to be set to your API credentials. These credentials are a base64 hash of
 "[apiusername]:[password]".
 
@@ -38,7 +38,7 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-    <groupId>sts.oda</groupId>
+    <groupId>io.swagger</groupId>
     <artifactId>swagger-java-client</artifactId>
     <version>1.0.0</version>
     <scope>compile</scope>
@@ -50,7 +50,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "sts.oda:swagger-java-client:1.0.0"
+compile "io.swagger:swagger-java-client:1.0.0"
 ```
 
 ### Others
@@ -64,24 +64,16 @@ Then manually install the following JARs:
 * target/swagger-java-client-1.0.0.jar
 * target/lib/*.jar
 
-## Running Tests
-
-Run the tests by executing:
-
-    mvn test
-
-
-
 ## Getting Started
 
 Please follow the [installation](#installation) instruction and execute the following Java code:
 
 ```java
 
-import sts.oda.client.*;
-import sts.oda.client.auth.*;
-import sts.oda.client.model.*;
-import sts.oda.client.api.DefaultApi;
+import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.DefaultApi;
 
 
 public class Example {
@@ -236,4 +228,3 @@ Authentication schemes defined for the API:
 It's recommended to create an instance of `ApiClient` per thread in a multithreaded environment to avoid any potential issues.
 
 ## Author
-
