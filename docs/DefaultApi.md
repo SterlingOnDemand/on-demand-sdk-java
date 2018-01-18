@@ -4,7 +4,7 @@ All URIs are relative to *https://api-int.kennect.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**billingCodesGet**](DefaultApi.md#billingCodesGet) | **GET** /billing-codes | 
+[**billingCodesGet**](DefaultApi.md#billingCodesGet) | **GET** /billing-codes | Get a list of valid billing codes
 [**candidatesGet**](DefaultApi.md#candidatesGet) | **GET** /candidates | Get a list of Candidates
 [**candidatesIdDocumentsGet**](DefaultApi.md#candidatesIdDocumentsGet) | **GET** /candidates/{id}/documents | List documents attached to a candidate
 [**candidatesIdDocumentsPost**](DefaultApi.md#candidatesIdDocumentsPost) | **POST** /candidates/{id}/documents | Attach a document to a candidate
@@ -13,14 +13,14 @@ Method | HTTP request | Description
 [**candidatesIdPut**](DefaultApi.md#candidatesIdPut) | **PUT** /candidates/{id} | Update a candidate
 [**candidatesIdTrustPost**](DefaultApi.md#candidatesIdTrustPost) | **POST** /candidates/{id}/trust | Trust a candidate
 [**candidatesPost**](DefaultApi.md#candidatesPost) | **POST** /candidates | Create a candidate
-[**healthGet**](DefaultApi.md#healthGet) | **GET** /health | 
-[**identitiesIdGet**](DefaultApi.md#identitiesIdGet) | **GET** /identities/{id} | 
-[**identitiesIdRetryPost**](DefaultApi.md#identitiesIdRetryPost) | **POST** /identities/{id}/retry | 
-[**identitiesIdVerificationPut**](DefaultApi.md#identitiesIdVerificationPut) | **PUT** /identities/{id}/verification | 
-[**identitiesPost**](DefaultApi.md#identitiesPost) | **POST** /identities | 
+[**healthGet**](DefaultApi.md#healthGet) | **GET** /health | Check the health of the API
+[**identitiesIdGet**](DefaultApi.md#identitiesIdGet) | **GET** /identities/{id} | Get a verified identity
+[**identitiesIdRetryPost**](DefaultApi.md#identitiesIdRetryPost) | **POST** /identities/{id}/retry | Retry creating an identity and get a new set of questions
+[**identitiesIdVerificationPut**](DefaultApi.md#identitiesIdVerificationPut) | **PUT** /identities/{id}/verification | Verify an identity by providing correct answers
+[**identitiesPost**](DefaultApi.md#identitiesPost) | **POST** /identities | Get a list of questions needing to be answered before an identity can be created
 [**packagesGet**](DefaultApi.md#packagesGet) | **GET** /packages | Get a list of Packages
 [**packagesIdPriceGet**](DefaultApi.md#packagesIdPriceGet) | **GET** /packages/{id}/price | Get the estimated price of a Package
-[**referenceCodesGet**](DefaultApi.md#referenceCodesGet) | **GET** /reference-codes | 
+[**referenceCodesGet**](DefaultApi.md#referenceCodesGet) | **GET** /reference-codes | Return a list of valid Reference Codes
 [**screeningsIdAdverseActionsPost**](DefaultApi.md#screeningsIdAdverseActionsPost) | **POST** /screenings/{id}/adverse-actions | Create an adverse action on a Screening
 [**screeningsIdDocumentsPost**](DefaultApi.md#screeningsIdDocumentsPost) | **POST** /screenings/{id}/documents | Attach a document to a Screening
 [**screeningsIdGet**](DefaultApi.md#screeningsIdGet) | **GET** /screenings/{id} | Get a specific screening
@@ -29,22 +29,22 @@ Method | HTTP request | Description
 [**screeningsIdReportLinksPost**](DefaultApi.md#screeningsIdReportLinksPost) | **POST** /screenings/{id}/report-links | Create  a one-time use report link
 [**screeningsIdReportPdfGet**](DefaultApi.md#screeningsIdReportPdfGet) | **GET** /screenings/{id}/report.pdf | Get a Screening report in PDF form
 [**screeningsPost**](DefaultApi.md#screeningsPost) | **POST** /screenings | Create a Screening
-[**subscriptionsIdDelete**](DefaultApi.md#subscriptionsIdDelete) | **DELETE** /subscriptions/{id} | 
-[**subscriptionsIdEventsGet**](DefaultApi.md#subscriptionsIdEventsGet) | **GET** /subscriptions/{id}/events | 
-[**subscriptionsIdGet**](DefaultApi.md#subscriptionsIdGet) | **GET** /subscriptions/{id} | 
-[**subscriptionsPost**](DefaultApi.md#subscriptionsPost) | **POST** /subscriptions | 
-[**trustedUsersIdGet**](DefaultApi.md#trustedUsersIdGet) | **GET** /trusted-users/{id} | 
-[**trustedUsersPost**](DefaultApi.md#trustedUsersPost) | **POST** /trusted-users | 
-[**trustsIdDelete**](DefaultApi.md#trustsIdDelete) | **DELETE** /trusts/{id} | 
+[**subscriptionsIdDelete**](DefaultApi.md#subscriptionsIdDelete) | **DELETE** /subscriptions/{id} | Delete a subscription
+[**subscriptionsIdEventsGet**](DefaultApi.md#subscriptionsIdEventsGet) | **GET** /subscriptions/{id}/events | Get a list of events related to a given subscription
+[**subscriptionsIdGet**](DefaultApi.md#subscriptionsIdGet) | **GET** /subscriptions/{id} | Get a subscription
+[**subscriptionsPost**](DefaultApi.md#subscriptionsPost) | **POST** /subscriptions | Create a subscription
+[**trustedUsersIdGet**](DefaultApi.md#trustedUsersIdGet) | **GET** /trusted-users/{id} | Get trust information about a verified user
+[**trustedUsersPost**](DefaultApi.md#trustedUsersPost) | **POST** /trusted-users | Trust a verified user
+[**trustsIdDelete**](DefaultApi.md#trustsIdDelete) | **DELETE** /trusts/{id} | Untrust a Trusted User
 
 
 <a name="billingCodesGet"></a>
 # **billingCodesGet**
 > BillingCodesResponse billingCodesGet()
 
+Get a list of valid billing codes
 
-
-
+Get a list of valid billing codes
 
 ### Example
 ```java
@@ -460,9 +460,9 @@ No authorization required
 # **healthGet**
 > HealthResponse healthGet(deep)
 
+Check the health of the API
 
-
-
+Check the health of the API
 
 ### Example
 ```java
@@ -505,9 +505,9 @@ No authorization required
 # **identitiesIdGet**
 > IdentityResponse identitiesIdGet(id)
 
+Get a verified identity
 
-
-
+Get a verified identity
 
 ### Example
 ```java
@@ -550,9 +550,9 @@ No authorization required
 # **identitiesIdRetryPost**
 > IdentityResponse identitiesIdRetryPost(id)
 
+Retry creating an identity and get a new set of questions
 
-
-
+Retry creating an identity and get a new set of questions
 
 ### Example
 ```java
@@ -595,9 +595,9 @@ No authorization required
 # **identitiesIdVerificationPut**
 > IdentityResponse identitiesIdVerificationPut(id, verificationRequest)
 
+Verify an identity by providing correct answers
 
-
-
+Verify an identity by providing correct answers
 
 ### Example
 ```java
@@ -642,9 +642,9 @@ No authorization required
 # **identitiesPost**
 > IdentityResponse identitiesPost(identityRequest)
 
+Get a list of questions needing to be answered before an identity can be created
 
-
-
+Get a list of questions needing to be answered before an identity can be created
 
 ### Example
 ```java
@@ -779,9 +779,9 @@ No authorization required
 # **referenceCodesGet**
 > ReferenceCodesResponse referenceCodesGet()
 
+Return a list of valid Reference Codes
 
-
-
+Return a list of valid Reference Codes
 
 ### Example
 ```java
@@ -1192,9 +1192,9 @@ No authorization required
 # **subscriptionsIdDelete**
 > SubscriptionResponse subscriptionsIdDelete(id)
 
+Delete a subscription
 
-
-
+Delete a subscription
 
 ### Example
 ```java
@@ -1237,9 +1237,9 @@ No authorization required
 # **subscriptionsIdEventsGet**
 > SubscriptionEventsResponse subscriptionsIdEventsGet(id)
 
+Get a list of events related to a given subscription
 
-
-
+Get a list of events related to a given subscription
 
 ### Example
 ```java
@@ -1282,9 +1282,9 @@ No authorization required
 # **subscriptionsIdGet**
 > SubscriptionResponse subscriptionsIdGet(id)
 
+Get a subscription
 
-
-
+Get a subscription
 
 ### Example
 ```java
@@ -1327,9 +1327,9 @@ No authorization required
 # **subscriptionsPost**
 > SubscriptionResponse subscriptionsPost(subscriptionRequest)
 
+Create a subscription
 
-
-
+Create a subscription
 
 ### Example
 ```java
@@ -1372,9 +1372,9 @@ No authorization required
 # **trustedUsersIdGet**
 > TrustedUserResponse trustedUsersIdGet(id)
 
+Get trust information about a verified user
 
-
-
+Get trust information about a verified user
 
 ### Example
 ```java
@@ -1417,9 +1417,9 @@ No authorization required
 # **trustedUsersPost**
 > TrustedUserResponse trustedUsersPost(trustedUserRequest)
 
+Trust a verified user
 
-
-
+Trust a verified user
 
 ### Example
 ```java
@@ -1462,9 +1462,9 @@ No authorization required
 # **trustsIdDelete**
 > trustsIdDelete(id)
 
+Untrust a Trusted User
 
-
-
+Untrust a Trusted User
 
 ### Example
 ```java
