@@ -27,7 +27,7 @@ import sts.oda.client.model.KnowledgeBasedAnswer;
 /**
  * IdentityResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-17T11:27:12.738-08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-18T09:55:21.026-08:00")
 public class IdentityResponse {
   @SerializedName("candidateId")
   private String candidateId = null;
