@@ -26,7 +26,7 @@ import java.io.IOException;
 /**
  * CandidatePortalLinkResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-18T13:50:14.250-08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-22T10:28:10.147-08:00")
 public class CandidatePortalLinkResponse {
   @SerializedName("candidatePortal")
   private String candidatePortal = null;
