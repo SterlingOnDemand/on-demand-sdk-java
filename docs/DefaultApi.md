@@ -22,6 +22,8 @@ Method | HTTP request | Description
 [**packagesIdPriceGet**](DefaultApi.md#packagesIdPriceGet) | **GET** /packages/{id}/price | Get the estimated price of a Package
 [**referenceCodesGet**](DefaultApi.md#referenceCodesGet) | **GET** /reference-codes | Return a list of valid Reference Codes
 [**screeningsIdAdverseActionsPost**](DefaultApi.md#screeningsIdAdverseActionsPost) | **POST** /screenings/{id}/adverse-actions | Create an adverse action on a Screening
+[**screeningsIdDocumentsAttachmentIdGet**](DefaultApi.md#screeningsIdDocumentsAttachmentIdGet) | **GET** /screenings/{id}/documents/{attachmentId} | 
+[**screeningsIdDocumentsGet**](DefaultApi.md#screeningsIdDocumentsGet) | **GET** /screenings/{id}/documents | 
 [**screeningsIdDocumentsPost**](DefaultApi.md#screeningsIdDocumentsPost) | **POST** /screenings/{id}/documents | Attach a document to a Screening
 [**screeningsIdGet**](DefaultApi.md#screeningsIdGet) | **GET** /screenings/{id} | Get a specific screening
 [**screeningsIdInvitePost**](DefaultApi.md#screeningsIdInvitePost) | **POST** /screenings/{id}/invite | Create an invite
@@ -861,6 +863,98 @@ No authorization required
 
  - **Content-Type**: */*
  - **Accept**: Not defined
+
+<a name="screeningsIdDocumentsAttachmentIdGet"></a>
+# **screeningsIdDocumentsAttachmentIdGet**
+> Map&lt;String, String&gt; screeningsIdDocumentsAttachmentIdGet(id, attachmentId)
+
+
+
+
+
+### Example
+```java
+// Import classes:
+//import sts.oda.client.ApiException;
+//import sts.oda.client.api.DefaultApi;
+
+
+DefaultApi apiInstance = new DefaultApi();
+String id = "id_example"; // String | 
+String attachmentId = "attachmentId_example"; // String | 
+try {
+    Map<String, String> result = apiInstance.screeningsIdDocumentsAttachmentIdGet(id, attachmentId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DefaultApi#screeningsIdDocumentsAttachmentIdGet");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
+ **attachmentId** | **String**|  |
+
+### Return type
+
+[**Map&lt;String, String&gt;**](Map.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/pdf
+
+<a name="screeningsIdDocumentsGet"></a>
+# **screeningsIdDocumentsGet**
+> List&lt;CandidateDocumentResponse&gt; screeningsIdDocumentsGet(id)
+
+
+
+
+
+### Example
+```java
+// Import classes:
+//import sts.oda.client.ApiException;
+//import sts.oda.client.api.DefaultApi;
+
+
+DefaultApi apiInstance = new DefaultApi();
+String id = "id_example"; // String | 
+try {
+    List<CandidateDocumentResponse> result = apiInstance.screeningsIdDocumentsGet(id);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DefaultApi#screeningsIdDocumentsGet");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
+
+### Return type
+
+[**List&lt;CandidateDocumentResponse&gt;**](CandidateDocumentResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 <a name="screeningsIdDocumentsPost"></a>
 # **screeningsIdDocumentsPost**
