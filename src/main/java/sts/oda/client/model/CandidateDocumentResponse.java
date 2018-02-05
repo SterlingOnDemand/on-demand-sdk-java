@@ -27,7 +27,7 @@ import org.joda.time.DateTime;
 /**
  * CandidateDocumentResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-05T09:50:06.551-08:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-05T12:21:25.201-08:00")
 public class CandidateDocumentResponse {
   @SerializedName("candidateId")
   private String candidateId = null;
